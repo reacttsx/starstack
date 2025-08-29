@@ -57,29 +57,25 @@ export default function DataAi() {
         }
         offsetForNavbar
       />
-      <section className="px-4 lg:px-20 pt-12 md:py-8 lg:mt-[-150px]">
+      <section className="px-4 lg:px-20 pt-12 md:py-8 lg:mt-[-240px]">
         <h2 className="text-3xl md:text-[56px] font-bold tracking-tight">
           <span className="text-black">Our</span>{" "}
           <span className="text-[#8e8e8e]">Services</span>
         </h2>
-        <div className="mt-8 grid gap-8 md:grid-cols-2">
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
           {aiServices.map((s) => (
             <article
               key={s.title}
               className="rounded-2xl bg-black text-white p-6 md:p-7 ring-1 ring-white/10"
             >
-              <div className="rounded-xl overflow-hidden">
-                <div className="relative aspect-[16/6]">
-                  <Image
-                    src={s.img}
-                    alt={s.title}
-                    fill
-                    sizes="(min-width:1024px) 45vw, 100vw"
-                    className="object-cover"
-                    priority={false}
-                  />
-                </div>
-              </div>
+              <Image
+                src={s.img}
+                alt={s.title}
+                width={572}
+                height={150}
+                className="object-cover h-[150px] w-full rounded-xl"
+                priority={false}
+              />
               <h3 className="mt-5 text-xl md:text-[32px] font-semibold">
                 {s.title}
               </h3>

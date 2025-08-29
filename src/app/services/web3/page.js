@@ -56,12 +56,12 @@ export default function Web3() {
         }
         offsetForNavbar
       />
-      <section className="px-4 lg:px-20 pt-12 md:py-8 lg:mt-[-150px]">
+      <section className="px-4 lg:px-20 pt-12 md:py-8 lg:mt-[-240px]">
         <h2 className="text-3xl md:text-[56px] font-bold tracking-tight">
           <span className="text-black">Our Web 3.0</span>{" "}
           <span className="text-[#8e8e8e]">Services</span>
         </h2>
-        <div className="mt-8 grid gap-6 lg:gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-6 lg:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {web3Services.map((s) => {
             const dark = s.variant === "dark";
 
@@ -69,7 +69,7 @@ export default function Web3() {
               <article
                 key={s.title}
                 className={[
-                  "rounded-2xl p-6 md:p-7 h-full",
+                  "rounded-2xl p-6 md:px-5 md:py-15 h-full",
                   dark
                     ? "bg-black text-white shadow-[0_8px_28px_rgba(0,0,0,0.18)] ring-2 ring-black"
                     : "bg-white text-black ring-2 ring-black",

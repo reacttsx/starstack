@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import clsx from "clsx";
+import Link from "next/link";
 
 const DEFAULT_ALL = "All Industries";
 
@@ -70,7 +71,7 @@ const IndustryPortfolio = ({
       </h2>
       <div className="grid gap-8 md:gap-10 md:grid-cols-2 lg:grid-cols-3">
         {filtered.map((item) => (
-          <article key={item.id} className="group">
+          <Link href={item.link} key={item.id} className="group">
             <div className="relative aspect-[16/10] overflow-hidden rounded-xl ring-1 ring-black/10">
               <Image
                 src={item.image}
@@ -87,7 +88,7 @@ const IndustryPortfolio = ({
             <p className="mt-2 text-base md:text-lg text-black">
               {item.blurb}
             </p>
-          </article>
+          </Link>
         ))}
       </div>
       {filtered.length === 0 && (

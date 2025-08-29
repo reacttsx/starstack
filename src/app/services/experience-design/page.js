@@ -47,7 +47,7 @@ export default function ExperienceDesign() {
         }
         offsetForNavbar
       />
-      <section className="px-4 lg:px-20 py-12 lg:mt-[-150px]">
+      <section className="px-4 lg:px-20 py-12 lg:mt-[-200px] relative">
         <div className="grid gap-10 md:grid-cols-12 items-start">
           <div className="md:col-span-5 hidden md:block">
             <div className="rounded-xl ring-1 ring-black/15 overflow-hidden">

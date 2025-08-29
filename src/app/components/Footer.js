@@ -112,40 +112,48 @@ const Footer = () => {
       </div>
       <div className="hidden md:block">
         <div className="px-4 lg:px-20 py-10 md:py-14">
-          <div className="flex justify-between gap-10 items-start">
+          <div className="flex justify-between gap-5 items-start">
             <div className="space-y-4 flex-1">
-              <div className="flex items-center gap-10 text-base lg:text-lg text-white text-nowrap">
-                <Link
-                  href="/services"
-                  className="opacity-90 hover:opacity-100 transition"
-                >
-                  Services
-                </Link>
-                <Link
-                  href="/about-us"
-                  className="opacity-90 hover:opacity-100 transition"
-                >
-                  About Us
-                </Link>
-                <Link
-                  href="/portfolio"
-                  className="opacity-90 hover:opacity-100 transition"
-                >
-                  Portfolio
-                </Link>
-              </div>
-              <ul className="mt-2 space-y-3 text-base lg:text-lg text-[#ADADAD]">
-                {services.map((s) => (
-                  <li key={s.name}>
+              <div className="flex md:gap-5 lg:gap-10">
+                <div>
+                  <div className="text-base lg:text-lg text-white text-nowrap">
                     <Link
-                      href={s.link}
-                      className="opacity-80 hover:opacity-100 transition"
+                      href="/services"
+                      className="opacity-90 hover:opacity-100 transition"
                     >
-                      {s.name}
+                      Services
                     </Link>
-                  </li>
-                ))}
-              </ul>
+                  </div>
+                  <ul className="mt-2 space-y-3 text-base lg:text-lg text-[#ADADAD]">
+                    {services.map((s) => (
+                      <li key={s.name}>
+                        <Link
+                          href={s.link}
+                          className="opacity-80 hover:opacity-100 transition"
+                        >
+                          {s.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <Link
+                    href="/about-us"
+                    className="opacity-90 hover:opacity-100 transition"
+                  >
+                    About Us
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    href="/portfolio"
+                    className="opacity-90 hover:opacity-100 transition"
+                  >
+                    Portfolio
+                  </Link>
+                </div>
+              </div>
             </div>
             <div className="text-center flex-1">
               <div className="flex justify-center">
@@ -159,7 +167,10 @@ const Footer = () => {
               </div>
               <p className="mt-4 text-base lg:text-lg text-white/40">
                 Be sure to take a look at our{" "}
-                <Link href="/privacy-policy" className="underline underline-offset-4">
+                <Link
+                  href="/privacy-policy"
+                  className="underline underline-offset-4"
+                >
                   Privacy Policy
                 </Link>
               </p>

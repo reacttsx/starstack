@@ -56,15 +56,20 @@ const Navbar = ({ staticHeader = false }) => {
   };
 
   return (
-    <header className={`absolute top-0 left-0 w-full z-40 py-4 px-4 lg:px-20 ${staticHeader ? "bg-black" : ""}`}>
+    <header
+      className={`absolute top-0 left-0 w-full z-40 py-4 px-4 lg:px-20 ${
+        staticHeader ? "bg-black" : ""
+      }`}
+    >
       <div className="flex items-center justify-between">
         <Link href="/" className="block">
           <Image
-            src="/logo.png"
+            src="/logo.svg"
             alt="Starstack"
-            width={140}
-            height={22}
-            className="md:w-[233px] md:h-[28px]"
+            width={233}
+            height={28}
+            priority
+            className="w-[160px] md:w-[233px] h-auto"
           />
         </Link>
         <nav className="hidden lg:flex gap-12 items-center text-lg text-white">
@@ -85,9 +90,11 @@ const Navbar = ({ staticHeader = false }) => {
             {openDesktop && (
               <div
                 role="menu"
-                className="absolute left-0 top-full mt-2 w-[360px] z-50"
+                className={`absolute left-0 top-full mt-2 w-[360px] z-50 ${
+                  staticHeader ? "bg-black rounded-2xl" : ""
+                }`}
               >
-                <div className="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl shadow-2xl overflow-hidden">
+                <div className="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl shadow-2xl overflow-hidden ">
                   <ul className="py-2">
                     {services.map((s, i) => {
                       const active = isActive(s.href);

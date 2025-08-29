@@ -42,15 +42,15 @@ export default function ServiceHero({
         <source src={bgVideo.src} type={bgVideo.type ?? "video/mp4"} />
       </video>
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/0 h-[90%] lg:h-[70%]" />
-      <div className="relative h-full">
-        <div className="mx-auto h-full px-6 lg:px-20 grid items-center lg:pb-[180px]">
+      <div className="relative h-full mt-5">
+        <div className="mx-auto h-full px-6 lg:px-20 grid items-center lg:pb-[250px]">
           <div>
             {eyebrow && (
               <p className="mb-4 text-base md:text-lg text-[#ADADAD]">
                 {eyebrow}
               </p>
             )}
-            <h1 className="font-bold tracking-tight leading-[1.05] text-3xl md:text-5xl">
+            <h1 className="font-bold tracking-tight leading-tight text-3xl md:text-5xl">
               {title.split("\n").map((line, i) => (
                 <span key={i} className="block">
                   {line}
@@ -68,7 +68,7 @@ export default function ServiceHero({
                     ))}
                   </p>
                 )}
-                <div className="mt-8">
+                <div className="mt-20">
                   <button
                     className="group flex items-center gap-3 border border-white text-white px-6 py-2.5 rounded-full text-base md:text-lg font-bold transition-colors duration-300 hover:bg-white hover:text-black hover:cursor-pointer"
                     onClick={() => router.push("/contact-us")}
@@ -86,9 +86,9 @@ export default function ServiceHero({
                     <Image
                       src={rightImage}
                       alt=""
-                      fill
-                      sizes="560px"
-                      className="object-cover"
+                      width={560}
+                      height={473}
+                      className="object-cover h-[473px]"
                       priority={false}
                     />
                   </div>

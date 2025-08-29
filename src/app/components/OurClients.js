@@ -9,11 +9,7 @@ const clients = [
   "/logos/urjamithra.png",
   "/logos/nordfield.png",
   "/logos/reconive.png",
-  "/logos/urjamithra.png",
-  "/logos/nordfield.png",
-  "/logos/nordfield.png",
-  "/logos/nordfield.png",
-  "/logos/nordfield.png",
+  "/logos/veriffhome.png",
 ];
 
 const OurClients = () => {
@@ -35,11 +31,9 @@ const OurClients = () => {
           speed={5000}
           autoplaySpeed={0}
           cssEase="linear"
-          slidesToShow={5}
+          slidesToShow={4}
           slidesToScroll={1}
           responsive={[
-            { breakpoint: 1280, settings: { slidesToShow: 6 } },
-            { breakpoint: 1024, settings: { slidesToShow: 5 } },
             { breakpoint: 768, settings: { slidesToShow: 4 } },
             { breakpoint: 480, settings: { slidesToShow: 3} },
           ]}

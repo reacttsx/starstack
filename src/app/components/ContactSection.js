@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { MdPhoneInTalk } from "react-icons/md";
 import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import countryList from "react-select-country-list";
 
 const countries = ["Country", "India", "USA", "UK", "Germany", "UAE"];
 const services = [
@@ -17,6 +18,8 @@ const services = [
 
 const ContactSection = ({ title = "", service = "" }) => {
   const [loading, setLoading] = useState(false);
+
+  const options = useMemo(() => countryList().getData(), [])
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -77,11 +80,11 @@ const ContactSection = ({ title = "", service = "" }) => {
             <select
               name="country"
               className="h-11 rounded-full border border-gray-200 px-4 text-sm outline-none focus:border-gray-300 focus:ring-2 focus:ring-black/10"
-              defaultValue={countries[0]}
             >
-              {countries.map((c) => (
-                <option key={c} value={c} disabled={c === "Country"}>
-                  {c}
+              <option value="">Select Country</option>
+              {options.map((c) => (
+                <option key={c.value} value={c.value}>
+                  {c.label}
                 </option>
               ))}
             </select>
@@ -152,7 +155,7 @@ const ContactSection = ({ title = "", service = "" }) => {
                 <div className="mt-2">
                   <div className="font-medium">USA</div>
                   <div className="text-base">
-                    Stanford, California
+                    San Francisco, California
                     <br /> (sales HQ)
                   </div>
                 </div>

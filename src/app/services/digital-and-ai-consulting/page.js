@@ -37,7 +37,7 @@ export default function DigitalAndAIConsulting() {
           poster: "/videos/digital-AI.jpg",
         }}
         rightImage="/images/digital-AI.jpg"
-        rightImgMobile="/images/digital-AI-mob.jpg"
+        rightImgMobile="/images/digital-AI.jpg"
         eyebrow="Digital & AI Consulting"
         title={
           "Enabling Digital Product and AI Success through Strategy, Insight, and Scalable Execution."
@@ -47,7 +47,7 @@ export default function DigitalAndAIConsulting() {
         }
         offsetForNavbar
       />
-      <section className="px-4 lg:px-20 py-12 lg:mt-[-170px]">
+      <section className="px-4 lg:px-20 py-12 lg:mt-[-240px]">
         <h2 className="text-3xl md:text-[56px] font-extrabold tracking-tight">
           <span className="text-black">Digital Platform</span>{" "}
           <span className="text-[#8e8e8e]">&amp; Product Management</span>
@@ -63,7 +63,9 @@ export default function DigitalAndAIConsulting() {
                 className="w-[68px] lg:w-[136px] h-[68px] lg:h-[136px]"
               />
               <div>
-                <h3 className="text-xl md:text-[32px] font-semibold">Product Vision</h3>
+                <h3 className="text-xl md:text-[32px] font-semibold">
+                  Product Vision
+                </h3>
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
                   Establish a well-defined, strategic vision for the product
                   that aligns with the business objectives and effectively
@@ -82,7 +84,9 @@ export default function DigitalAndAIConsulting() {
                 className="w-[68px] lg:w-[136px] h-[68px] lg:h-[136px]"
               />
               <div>
-                <h3 className="text-xl md:text-[32px] font-semibold">Product Roadmap</h3>
+                <h3 className="text-xl md:text-[32px] font-semibold">
+                  Product Roadmap
+                </h3>
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
                   Develop a comprehensive plan that outlines key product
                   features, delivery timelines, future enhancements, and
@@ -101,7 +105,9 @@ export default function DigitalAndAIConsulting() {
                 className="w-[68px] lg:w-[136px] h-[68px] lg:h-[136px]"
               />
               <div>
-                <h3 className="text-xl md:text-[32px] font-semibold">Business Analysis</h3>
+                <h3 className="text-xl md:text-[32px] font-semibold">
+                  Business Analysis
+                </h3>
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
                   Understand the business needs and translate them into
                   practical product features that add real value.
@@ -154,7 +160,7 @@ export default function DigitalAndAIConsulting() {
                 />
               </div>
               <div className="bg-black text-white p-4">
-                <h3 className="text-xl md:text-[32px] font-semibold leading-tight">
+                <h3 className="text-xl md:text-[32px] font-semibold leading-tight md:min-h-30 2xl:min-h-20">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-base md:text-lg leading-relaxed">

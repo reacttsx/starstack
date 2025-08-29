@@ -46,7 +46,7 @@ export default function HeroImage({
             "mx-auto px-6 lg:px-20",
             "grid items-center",
             justifyMap,
-            "min-h-[calc(85svh-var(--nav-height,0px))] md:min-h-[calc(100svh-var(--nav-height,0px))]"
+            "min-h-[calc(85svh-var(--nav-height,0px))] md:min-h-[calc(75svh-var(--nav-height,0px))]"
           )}
         >
           <div className="max-w-3xl">

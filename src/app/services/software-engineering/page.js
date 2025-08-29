@@ -46,13 +46,13 @@ export default function SoftwareEngineering() {
         }
         offsetForNavbar
       />
-      <section className="px-4 lg:px-20 py-12 lg:mt-[-150px]">
+      <section className="px-4 lg:px-20 py-12 lg:mt-[-240px]">
         <h2 className="text-3xl md:text-[56px] font-bold tracking-tight">
           <span className="text-black">Our Software Engineering</span>{" "}
           <span className="text-[#8e8e8e]">Capabilities</span>
         </h2>
-        <div className="mt-5 md:mt-10 grid gap-5 md:gap-8 md:grid-cols-12 items-center">
-          <div className="md:col-span-7">
+        <div className="mt-5 md:mt-10 grid gap-5 md:grid-cols-12 items-center">
+          <div className="md:col-span-6">
             <div className="rounded-xl ring-1 ring-black/15 overflow-hidden block md:hidden mb-5">
               <div className="relative aspect-[16/9]">
                 <Image
@@ -76,7 +76,7 @@ export default function SoftwareEngineering() {
               mission-critical functions across departments.
             </p>
           </div>
-          <div className="md:col-span-5 hidden md:block">
+          <div className="md:col-span-6 hidden md:block">
             <div className="rounded-xl ring-1 ring-black/15 overflow-hidden">
               <div className="relative aspect-[16/9]">
                 <Image
@@ -91,8 +91,8 @@ export default function SoftwareEngineering() {
             </div>
           </div>
         </div>
-        <div className="mt-10 md:mt-12 grid gap-5 md:gap-8 md:grid-cols-12 items-center">
-          <div className="md:col-span-5">
+        <div className="mt-10 md:mt-12 grid gap-5 md:grid-cols-12 items-center">
+          <div className="md:col-span-6">
             <div className="rounded-xl ring-1 ring-black/15 overflow-hidden">
               <div className="relative aspect-[16/9]">
                 <Image
@@ -106,7 +106,7 @@ export default function SoftwareEngineering() {
               </div>
             </div>
           </div>
-          <div className="md:col-span-7">
+          <div className="md:col-span-6">
             <h3 className="text-xl md:text-[32px] font-semibold">
               Web Application Development
             </h3>
@@ -120,8 +120,8 @@ export default function SoftwareEngineering() {
             </p>
           </div>
         </div>
-        <div className="mt-10 md:mt-12 grid gap-5 md:gap-8 md:grid-cols-12 items-center">
-          <div className="md:col-span-7">
+        <div className="mt-10 md:mt-12 grid gap-5 md:grid-cols-12 items-center">
+          <div className="md:col-span-6">
             <div className="rounded-xl ring-1 ring-black/15 overflow-hidden block md:hidden mb-5">
               <div className="relative aspect-[16/9]">
                 <Image
@@ -146,7 +146,7 @@ export default function SoftwareEngineering() {
               mobile architecture.
             </p>
           </div>
-          <div className="md:col-span-5 hidden md:block">
+          <div className="md:col-span-6 hidden md:block">
             <div className="rounded-xl ring-1 ring-black/15 overflow-hidden">
               <div className="relative aspect-[16/9]">
                 <Image
@@ -161,8 +161,8 @@ export default function SoftwareEngineering() {
             </div>
           </div>
         </div>
-        <div className="mt-10 md:mt-12 grid gap-5 md:gap-8 md:grid-cols-12 items-center">
-          <div className="md:col-span-5">
+        <div className="mt-10 md:mt-12 grid gap-5 md:grid-cols-12 items-center">
+          <div className="md:col-span-6">
             <div className="rounded-xl ring-1 ring-black/15 overflow-hidden">
               <div className="relative aspect-[16/9]">
                 <Image
@@ -176,7 +176,7 @@ export default function SoftwareEngineering() {
               </div>
             </div>
           </div>
-          <div className="md:col-span-7">
+          <div className="md:col-span-6">
             <h3 className="text-xl md:text-[32px] font-semibold">
               Application Modernization
             </h3>
@@ -189,8 +189,8 @@ export default function SoftwareEngineering() {
             </p>
           </div>
         </div>
-        <div className="mt-10 md:mt-12 grid gap-5 md:gap-8 md:grid-cols-12 items-center">
-          <div className="md:col-span-7">
+        <div className="mt-10 md:mt-12 grid gap-5 md:grid-cols-12 items-center">
+          <div className="md:col-span-6">
             <div className="rounded-xl ring-1 ring-black/15 overflow-hidden block md:hidden mb-5">
               <div className="relative aspect-[16/9]">
                 <Image
@@ -214,7 +214,7 @@ export default function SoftwareEngineering() {
               with confidence.
             </p>
           </div>
-          <div className="md:col-span-5 hidden md:block">
+          <div className="md:col-span-6 hidden md:block">
             <div className="rounded-xl ring-1 ring-black/15 overflow-hidden">
               <div className="relative aspect-[16/9]">
                 <Image
@@ -235,15 +235,15 @@ export default function SoftwareEngineering() {
           <span className="text-black">Our engagement</span>{" "}
           <span className="text-[#8e8e8e]">models</span>
         </h2>
-        <div className="mt-5 md:mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-5 md:mt-8 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
           {models.map((m) => (
             <article
               key={m.title}
               className="rounded-2xl overflow-hidden ring-1 ring-black/10 shadow-[0_8px_28px_rgba(0,0,0,0.12)] bg-black flex flex-col justify-between"
             >
-              <div className="bg-black text-white p-7 md:p-8 min-h-[270px] flex flex-col">
+              <div className="bg-black text-white p-7 min-h-[270px] flex flex-col">
                 <Image src={m.icon} alt={m.title} width={100} height={100} />
-                <h3 className="text-xl md:text-[32px] font-semibold leading-snug mt-5">
+                <h3 className="text-xl md:text-[32px] font-semibold leading-snug mt-5 md:h-20 xl:h-auto">
                   {m.title}
                 </h3>
                 <p className="mt-3 text-base md:text-lg leading-relaxed">{m.copy}</p>

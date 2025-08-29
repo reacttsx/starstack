@@ -12,6 +12,7 @@ const data = [
     blurb: "Solar web portal with CMR-integrated Quote system",
     image: "/images/portfolio1.png",
     categories: ["Renewable Energy"],
+    link: "/case-study/urjamithra",
   },
   {
     id: 2,
@@ -19,15 +20,8 @@ const data = [
     blurb: "KYC Automation, Escrow Payments & Instant Credit Scoring",
     image: "/images/portfolio2.png",
     categories: ["Banking & Insurance"],
-  },
-  {
-    id: 3,
-    title: "Project Title",
-    blurb:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    image: "/images/portfolio3.png",
-    categories: ["Supply Chain"],
-  },
+    link: "/case-study/veriffhome",
+  }
 ];
 
 export default function Portfolio() {
@@ -39,7 +33,7 @@ export default function Portfolio() {
         imageAlt="Explore how we engineer impact across industries."
         eyebrow="Portfolio"
         title={"Explore how we\nengineer impact\nacross industries."}
-        description="Backed by strategy and built to scale, our solutions don’t just solve problems—  they shape industries."
+        description="Backed by strategy and built to scale, our solutions don’t just solve problems they shape industries."
         align="left"
       />
       <section className="px-4 lg:px-20 py-10">

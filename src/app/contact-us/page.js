@@ -12,7 +12,7 @@ export default function ContactUs() {
         imageAlt="Let’s Connect and Create Something Great"
         eyebrow="Contact Us"
         title={"Let’s Connect and\nCreate Something\nGreat"}
-        description="From ideas to execution, we’re with you. Let’s bring your vision to life — together."
+        description="From ideas to execution, we’re with you. Let’s bring your vision to life together."
         align="left"
       />
       <section className="px-6 md:px-20">

@@ -5,44 +5,51 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import OurClients from "./OurClients";
+import Link from "next/link";
 
 const services = [
   {
     icon: "/icons/digital-ai.png",
     title: "Digital & AI Consulting",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.",
+      "Bridge the gap between business goals and emerging technologies with tailored digital strategies.",
     image: "/images/person-chart.png",
+    link: "/services/digital-and-ai-consulting",
   },
   {
     icon: "/icons/experience-design.png",
-    title: "Experience Design",
-    description: "Experience Design description here.",
+    title: "Experience Design (UI/UX)",
+    description: "Crafting intuitive, human-centered designs that deliver seamless digital experiences.",
     image: "/images/experience.png",
+    link: "/services/experience-design",
   },
   {
     icon: "/icons/software-engineering.png",
     title: "Software Engineering",
-    description: "Software Engineering description here.",
+    description: "Building robust, scalable, and modern applications that accelerate business growth.",
     image: "/images/software.png",
+    link: "/services/software-engineering",
   },
   {
     icon: "/icons/web3.png",
-    title: "Web 3.0",
-    description: "Web 3.0 description here.",
+    title: "Web 3.0 Development",
+    description: "Empowering businesses with decentralized, transparent, and future-ready solutions.",
     image: "/images/web3.png",
+    link: "/services/web3",
   },
   {
     icon: "/icons/data-ai.png",
     title: "Data & AI",
-    description: "Data & AI description here.",
+    description: "Turning data into actionable intelligence with advanced AI-driven insights.",
     image: "/images/data.png",
+    link: "/services/data-ai",
   },
   {
     icon: "/icons/cloud-services.png",
     title: "Cloud Services",
-    description: "Cloud Services description here.",
+    description: "Unlock agility, scalability, and security with cloud-native solutions.",
     image: "/images/cloud.png",
+    link: "/services/cloud",
   },
 ];
 
@@ -175,7 +182,7 @@ export default function WhatWeDo() {
                           <p className="text-base lg:text-[22px] text-[#032E40]">
                             {item.description}
                           </p>
-                          <div className="mt-5 flex items-center gap-2 text-xl text-black cursor-pointer">
+                          <Link href={item.link} className="mt-5 flex items-center gap-2 text-xl text-black cursor-pointer">
                             Learn more
                             <Image
                               src="/icons/line.png"
@@ -183,7 +190,7 @@ export default function WhatWeDo() {
                               height={16}
                               alt="line"
                             />
-                          </div>
+                          </Link>
                         </div>
                       </div>
                     </div>

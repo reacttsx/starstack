@@ -21,14 +21,14 @@ export default function AboutUs() {
           <h1 className="text-3xl md:text-[56px] font-bold text-center mb-5">
             Who We <span className="text-[#8e8e8e]">Are</span>
           </h1>
-          <p className="mb-5">
+          <p className="mb-5 text-base md:text-lg">
             Starstack is an AI-powered digital transformation company built for
             the next frontier of technology. We help ambitious startups,
             visionary enterprises, and forward-thinking institutions navigate
             and lead in the digital era through a powerful combination of
             design, engineering, and intelligence.
           </p>
-          <p>
+          <p className="text-base md:text-lg">
             Whether {`it's`} creating a smart new platform, exploring AI
             possibilities, or helping teams move to the cloud, we focus on
             making things that are not just scalable, but truly useful and

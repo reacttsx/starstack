@@ -5,37 +5,20 @@ import Image from "next/image";
 import { CgArrowLongRight } from "react-icons/cg";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import Link from "next/link";
 
 const stories = [
   {
-    title: "Empowering E-Commerce",
-    body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard",
-    img: "/images/success-1.png",
+    title: "Empowering Solar Energy Company",
+    body: "Solar web portal with CMR-integrated Quote system",
+    img: "/images/success-1.jpg",
+    link: "/case-study/urjamithra",
   },
   {
-    title: "Empowering E-Commerce",
-    body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard",
+    title: "Powering Fintech Trust",
+    body: "KYC Automation, Escrow Payments & Instant Credit Scoring",
     img: "/images/success-2.png",
-  },
-  {
-    title: "Empowering E-Commerce",
-    body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard",
-    img: "/images/success-3.png",
-  },
-  {
-    title: "Empowering E-Commerce",
-    body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard",
-    img: "/images/success-4.png",
-  },
-  {
-    title: "Empowering E-Commerce",
-    body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard",
-    img: "/images/success-5.png",
-  },
-  {
-    title: "Empowering E-Commerce",
-    body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard",
-    img: "/images/success-6.png",
+    link: "/case-study/veriffhome",
   },
 ];
 
@@ -53,7 +36,11 @@ export default function Home() {
           </h2>
           <div className="grid gap-10 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
             {stories.map((story, i) => (
-              <article key={i} className="group">
+              <Link
+                key={i}
+                href={story.link}
+                className="group bg-[#111] rounded-lg hover:cursor-pointer"
+              >
                 <div className="rounded-lg overflow-hidden shadow-lg transform transition duration-300 group-hover:-translate-y-1">
                   <div className="relative h-56">
                     <Image
@@ -63,7 +50,7 @@ export default function Home() {
                       className="object-cover group-hover:scale-105 transition duration-300"
                     />
                   </div>
-                  <div className="p-5 bg-[#111]">
+                  <div className="p-5">
                     <h3 className="text-xl md:text-2xl font-semibold mb-2 text-white">
                       {story.title}
                     </h3>
@@ -72,7 +59,7 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
           <div className="mt-14 flex justify-center">
