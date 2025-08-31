@@ -9,7 +9,7 @@ export default function Urjamithra() {
         imageSrc="/images/urjamithra.png"
         imageAlt="Urjamithra case header"
         title="Urjamithra Solar Web Portal with CRM-Integrated Quote System"
-        category="Banking & Insurance"
+        category="Renewable Energy"
       />
       <section className="px-4 lg:px-20 py-12 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">

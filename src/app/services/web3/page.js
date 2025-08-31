@@ -3,6 +3,13 @@ import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 import ServiceHero from "@/app/components/ServiceHero";
 
+export const metadata = {
+  title:
+    "Web 3.0 Development | dApps, Smart Contracts & Blockchain Solutions - Starstack",
+  description:
+    "Starstack builds secure, scalable Web 3.0 solutions including dApps, smart contracts, NFTs, and DeFi platforms. Empower your business with blockchain innovation.",
+};
+
 const web3Services = [
   {
     title: "Web 3.0 Development",

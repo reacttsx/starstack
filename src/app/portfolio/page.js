@@ -5,6 +5,12 @@ import IndustryPortfolio from "../components/IndustryPortfolio";
 import { CgArrowLongRight } from "react-icons/cg";
 import OurClients from "../components/OurClients";
 
+export const metadata = {
+  title: "Starstack Portfolio | Case Studies in Digital & AI Consulting",
+  description:
+    "Explore Starstack's portfolio of software engineering, digital consulting, and AI solutions. Real projects showcasing our expertise and client success.",
+};
+
 const data = [
   {
     id: 1,
@@ -21,7 +27,7 @@ const data = [
     image: "/images/portfolio2.png",
     categories: ["Banking & Insurance"],
     link: "/case-study/veriffhome",
-  }
+  },
 ];
 
 export default function Portfolio() {
@@ -30,6 +36,7 @@ export default function Portfolio() {
       <Navbar />
       <HeroImage
         imageSrc="/images/portfolio.png"
+        imageSrcMob="/images/portfolio-mob.png"
         imageAlt="Explore how we engineer impact across industries."
         eyebrow="Portfolio"
         title={"Explore how we\nengineer impact\nacross industries."}

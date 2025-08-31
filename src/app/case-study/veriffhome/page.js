@@ -9,7 +9,7 @@ export default function Veriffhome() {
         imageSrc="/images/veriffhome.png"
         imageAlt="Veriffhome case header"
         title="VeriffHome - A Fintech Platform for Identity Verification,  Escrow Payments & Credit Scoring"
-        category="Renewable Energy"
+        category="Banking & Insurance"
       />
       <section className="px-4 lg:px-20 py-12 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">

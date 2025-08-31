@@ -23,8 +23,7 @@ const slides = [
     id: 3,
     video: "/videos/slider-home-3.mp4",
     heading: `Intelligent Solutions\nwith AI at the Core`,
-    subheading:
-      "Infuse intelligence into your products, automate, optimise, and innovate with explainable AI.",
+    subheading: `Infuse intelligence into your products, automate, optimise,\nand innovate with explainable AI.`,
   },
   {
     id: 4,
@@ -81,7 +80,6 @@ export default function HeroSlider() {
             <div className="flex items-center justify-start h-full px-6 lg:px-20">
               <div className="max-w-2xl">
                 <h1 className="text-3xl md:text-[56px] font-bold mb-4">
-                  {/* {slide.heading} */}
                   {slide.heading.split("\n").map((line, i) => (
                     <span key={i} className="block">
                       {line}
@@ -89,7 +87,11 @@ export default function HeroSlider() {
                   ))}
                 </h1>
                 <p className="text-base md:text-[22px] mb-16 text-white">
-                  {slide.subheading}
+                  {slide.subheading.split("\n").map((line, i) => (
+                    <span key={i} className="block">
+                      {line}
+                    </span>
+                  ))}
                 </p>
                 <button
                   className="group flex items-center gap-3 border border-white text-white px-6 py-2.5 rounded-full text-lg font-bold transition-colors duration-300 hover:bg-white hover:text-black hover:cursor-pointer"
