@@ -4,6 +4,12 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ContactButton from "../components/ContactButton";
 
+export const metadata = {
+  title: "About Starstack | IT Consulting & Software Experts",
+  description:
+    "Learn about Starstack an AI and software development company helping global clients with AI, cloud, and digital solutions",
+};
+
 export default function AboutUs() {
   return (
     <main className="bg-white text-black">
@@ -55,7 +61,7 @@ export default function AboutUs() {
               <p className="text-base md:text-lg font-semibold mt-5 md:mt-8">
                 Vishnu V Phalgunan,{" "}
                 <span className="text-[#969696] font-normal">
-                  founder & ceo, starstack
+                  Founder & CEO, Starstack
                 </span>
               </p>
             </div>

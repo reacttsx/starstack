@@ -4,6 +4,12 @@ import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 import ServiceHero from "@/app/components/ServiceHero";
 
+export const metadata = {
+  title: "Cloud Services | Cloud Architecture, Migration & DevOps - Starstack",
+  description:
+    "Starstack provides cloud consulting, architecture design, migration, DevOps, and managed cloud services. Secure, scalable, and cost-effective cloud solutions for enterprises.",
+};
+
 export default function Cloud() {
   return (
     <main>

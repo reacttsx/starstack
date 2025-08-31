@@ -19,205 +19,147 @@ const services = [
   {
     icon: "/icons/experience-design.png",
     title: "Experience Design (UI/UX)",
-    description: "Crafting intuitive, human-centered designs that deliver seamless digital experiences.",
+    description:
+      "Crafting intuitive, human-centered designs that deliver seamless digital experiences.",
     image: "/images/experience.png",
     link: "/services/experience-design",
   },
   {
     icon: "/icons/software-engineering.png",
     title: "Software Engineering",
-    description: "Building robust, scalable, and modern applications that accelerate business growth.",
+    description:
+      "Building robust, scalable, and modern applications that accelerate business growth.",
     image: "/images/software.png",
     link: "/services/software-engineering",
   },
   {
     icon: "/icons/web3.png",
     title: "Web 3.0 Development",
-    description: "Empowering businesses with decentralized, transparent, and future-ready solutions.",
+    description:
+      "Empowering businesses with decentralized, transparent, and future-ready solutions.",
     image: "/images/web3.png",
     link: "/services/web3",
   },
   {
     icon: "/icons/data-ai.png",
     title: "Data & AI",
-    description: "Turning data into actionable intelligence with advanced AI-driven insights.",
+    description:
+      "Turning data into actionable intelligence with advanced AI-driven insights.",
     image: "/images/data.png",
     link: "/services/data-ai",
   },
   {
     icon: "/icons/cloud-services.png",
     title: "Cloud Services",
-    description: "Unlock agility, scalability, and security with cloud-native solutions.",
+    description:
+      "Unlock agility, scalability, and security with cloud-native solutions.",
     image: "/images/cloud.png",
     link: "/services/cloud",
   },
 ];
 
 export default function WhatWeDo() {
-  const sectionRef = useRef(null);
-  const sentinelRef = useRef(null);
-
-  const [idx, setIdx] = useState(null);
-
-  const max = services.length - 1;
-
-  const lock = () => (document.documentElement.style.overflow = "hidden");
-
-  const unlock = () => (document.documentElement.style.overflow = "");
-
-  useEffect(() => {
-    const io = new IntersectionObserver(
-      ([e]) => {
-        if (!e.isIntersecting) {
-          setIdx(0);
-          lock();
-        } else {
-          unlock();
-        }
-      },
-      { threshold: 0 }
-    );
-    if (sentinelRef.current) io.observe(sentinelRef.current);
-    return () => {
-      io.disconnect();
-      unlock();
-    };
-  }, []);
-
-  useEffect(() => {
-    const step = (dir) => setIdx((i) => Math.min(Math.max(i + dir, 0), max));
-
-    const wheel = (e) => {
-      if (document.documentElement.style.overflow !== "hidden") return;
-      e.preventDefault();
-      if (idx === 0 && e.deltaY < 0) {
-        unlock();
-        return;
-      }
-      if (idx === max && e.deltaY > 0) {
-        unlock();
-        return;
-      }
-      step(e.deltaY > 0 ? 1 : -1);
-    };
-
-    const key = (e) => {
-      if (document.documentElement.style.overflow !== "hidden") return;
-      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
-        e.preventDefault();
-        wheel({ deltaY: e.key === "ArrowDown" ? 1 : -1 });
-      }
-    };
-
-    window.addEventListener("wheel", wheel, { passive: false });
-    window.addEventListener("keydown", key);
-
-    return () => {
-      window.removeEventListener("wheel", wheel);
-      window.removeEventListener("keydown", key);
-    };
-  }, [idx, max]);
+  const [idx, setIdx] = useState(0);
 
   const current = services[idx] ?? services[0];
 
   return (
-    <>
-      <div ref={sentinelRef} className="h-px" />
-      <section
-        ref={sectionRef}
-        className="py-10 md:py-20 px-4 lg:px-20 bg-white"
-      >
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          <div className="flex-1 space-y-6">
-            <h2 className="text-3xl lg:text-[56px] font-bold mb-8 lg:mb-14 text-black">
-              What <span className="text-[#8e8e8e]">We Do</span>
-            </h2>
-            {services.map((item, i) => {
-              const active = i === idx;
+    <section className="py-10 md:py-20 px-4 lg:px-20 bg-white">
+      <div className="flex flex-col md:flex-row items-center gap-12">
+        <div className="flex-1 space-y-6">
+          <h2 className="text-3xl lg:text-[56px] font-bold mb-8 lg:mb-14 text-black">
+            What <span className="text-[#8e8e8e]">We Do</span>
+          </h2>
+          {services.map((item, i) => {
+            const active = i === idx;
 
-              return (
+            return (
+              <div
+                key={i}
+                onClick={() => setIdx(idx === i ? null : i)}
+                className={`border-b-2 border-[#BEBEBE] pb-4 cursor-pointer ${
+                  services.length === i + 1 ? "border-b-0!" : ""
+                }`}
+              >
                 <div
-                  key={i}
-                  onClick={() => setIdx(idx === i ? null : i)}
-                  className={`border-b-2 border-[#BEBEBE] pb-4 cursor-pointer ${
-                    services.length === i + 1 ? "border-b-0!" : ""
+                  className={`flex justify-between ${
+                    active ? "items-start" : "items-center"
                   }`}
                 >
                   <div
-                    className={`flex justify-between ${
+                    className={`flex ${
                       active ? "items-start" : "items-center"
-                    }`}
+                    } gap-4`}
                   >
-                    <div
-                      className={`flex ${
-                        active ? "items-start" : "items-center"
-                      } gap-4`}
-                    >
-                      <Image
-                        src={item.icon}
-                        alt={item.title}
-                        width={42}
-                        height={42}
-                      />
-                      <div>
-                        <h4
-                          className={`font-semibold text-xl lg:text-[32px] transition-colors ${
-                            active
-                              ? "text-black lg:text-[#032E40]"
-                              : "text-black lg:text-[#B4B4B4]"
-                          }`}
+                    <Image
+                      src={item.icon}
+                      alt={item.title}
+                      width={42}
+                      height={42}
+                    />
+                    <div>
+                      <h4
+                        className={`font-semibold text-xl lg:text-[32px] transition-colors ${
+                          active
+                            ? "text-black lg:text-[#032E40]"
+                            : "text-black lg:text-[#B4B4B4]"
+                        }`}
+                      >
+                        {item.title}
+                      </h4>
+                      <div
+                        className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${
+                          active
+                            ? "max-h-[350px] lg:max-h-[300px] mt-3"
+                            : "max-h-0 mt-0"
+                        }`}
+                      >
+                        <img
+                          src={current.image}
+                          alt={current.title}
+                          className="mx-auto object-contain mb-5 lg:hidden"
+                        />
+                        <p className="text-base lg:text-[22px] text-[#032E40]">
+                          {item.description}
+                        </p>
+                        <Link
+                          href={item.link}
+                          className="mt-5 flex items-center gap-2 text-xl text-black cursor-pointer"
                         >
-                          {item.title}
-                        </h4>
-                        <div
-                          className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${
-                            active ? "max-h-[350px] lg:max-h-[300px] mt-3" : "max-h-0 mt-0"
-                          }`}
-                        >
-                          <img
-                            src={current.image}
-                            alt={current.title}
-                            className="mx-auto object-contain mb-5 lg:hidden"
+                          Learn more
+                          <Image
+                            src="/icons/line.png"
+                            width={44}
+                            height={16}
+                            alt="line"
                           />
-                          <p className="text-base lg:text-[22px] text-[#032E40]">
-                            {item.description}
-                          </p>
-                          <Link href={item.link} className="mt-5 flex items-center gap-2 text-xl text-black cursor-pointer">
-                            Learn more
-                            <Image
-                              src="/icons/line.png"
-                              width={44}
-                              height={16}
-                              alt="line"
-                            />
-                          </Link>
-                        </div>
+                        </Link>
                       </div>
                     </div>
-                    <div className="lg:hidden">
-                      {idx === i ? (
-                        <FiChevronUp size={26} color="#000000" />
-                      ) : (
-                        <FiChevronDown size={26} color="#000000" />
-                      )}
-                    </div>
+                  </div>
+                  <div className="lg:hidden">
+                    {idx === i ? (
+                      <FiChevronUp size={26} color="#000000" />
+                    ) : (
+                      <FiChevronDown size={26} color="#000000" />
+                    )}
                   </div>
                 </div>
-              );
-            })}
-          </div>
-          <div className="flex-1 relative hidden lg:block">
-            <img
-              src={current.image}
-              alt={current.title}
-              className="mx-auto object-contain"
-            />
-          </div>
+              </div>
+            );
+          })}
         </div>
-        <div className="w-full mt-10 md:mt-20">
-          <OurClients />
+        <div className="flex-1 relative hidden lg:block">
+          <img
+            src={current.image}
+            alt={current.title}
+            className="mx-auto object-contain"
+          />
         </div>
-      </section>
-    </>
+      </div>
+      <div className="w-full mt-10 md:mt-20">
+        <OurClients />
+      </div>
+    </section>
   );
 }

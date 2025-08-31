@@ -4,6 +4,12 @@ import Navbar from "@/app/components/Navbar";
 import ServiceHero from "@/app/components/ServiceHero";
 import Image from "next/image";
 
+export const metadata = {
+  title: "UI/UX Design Company | User Experience Research & Strategy",
+  description:
+    "Starstack offers user-focused UI/UX design, research, and strategy. We craft digital experiences that drive engagement, accessibility, and business impact.",
+};
+
 const servicesProcess = [
   {
     title: "Design Audit",

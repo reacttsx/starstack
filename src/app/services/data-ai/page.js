@@ -4,6 +4,13 @@ import Navbar from "@/app/components/Navbar";
 import ServiceHero from "@/app/components/ServiceHero";
 import Image from "next/image";
 
+export const metadata = {
+  title:
+    "Data & AI Consulting | Machine Learning, NLP & Computer Vision - Starstack",
+  description:
+    "Transform your business with Starstack's Data & AI services - machine learning, NLP, computer vision, and predictive analytics. From strategy to deployment, we deliver AI that drives growth.",
+};
+
 const aiServices = [
   {
     title: "Data & AI Services",

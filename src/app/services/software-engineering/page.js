@@ -5,6 +5,13 @@ import Navbar from "@/app/components/Navbar";
 import ServiceHero from "@/app/components/ServiceHero";
 import Image from "next/image";
 
+export const metadata = {
+  title:
+    "Software Development | Web App Development, Mobile App Development - Starstack",
+  description:
+    "End-to-end software development services including enterprise apps, mobile, web, modernization, and QA. Build scalable, future-ready solutions with Starstack.",
+};
+
 const models = [
   {
     icon: "/icons/dedicated.png",
@@ -246,7 +253,9 @@ export default function SoftwareEngineering() {
                 <h3 className="text-xl md:text-[32px] font-semibold leading-snug mt-5 md:h-20 xl:h-auto">
                   {m.title}
                 </h3>
-                <p className="mt-3 text-base md:text-lg leading-relaxed">{m.copy}</p>
+                <p className="mt-3 text-base md:text-lg leading-relaxed">
+                  {m.copy}
+                </p>
               </div>
               <img
                 src={m.img}

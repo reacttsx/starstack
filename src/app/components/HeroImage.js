@@ -3,6 +3,7 @@ import clsx from "clsx";
 
 export default function HeroImage({
   imageSrc,
+  imageSrcMob = null,
   imageAlt = "",
   eyebrow,
   title,
@@ -25,16 +26,26 @@ export default function HeroImage({
       )}
       style={{ paddingTop: "var(--nav-height, 0px)" }}
     >
+      {imageSrcMob && (
+        <Image
+          src={imageSrcMob}
+          alt={imageAlt}
+          fill
+          sizes="100vw"
+          priority={priority}
+          className="object-cover md:hidden"
+        />
+      )}
       <Image
         src={imageSrc}
         alt={imageAlt}
         fill
         sizes="100vw"
         priority={priority}
-        className="object-cover"
+        className="object-cover hidden md:block"
       />
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 portfolio-gradient"
         style={{
           background:
             "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.685609) 53.58%, #000 100%)",

@@ -4,6 +4,12 @@ import Navbar from "@/app/components/Navbar";
 import ServiceHero from "@/app/components/ServiceHero";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Digital & AI Consulting Services | Cloud & Data Strategy - Starstack",
+  description:
+    "Transform your business with Starstack's digital consulting, AI solutions, and cloud strategy services. Helping enterprises unlock efficiency and growth.",
+};
+
 const aiReadiness = [
   {
     img: "/images/ai/infra.jpg",

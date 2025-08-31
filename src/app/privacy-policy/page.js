@@ -2,6 +2,12 @@ import ContactSection from "@/app/components/ContactSection";
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 
+export const metadata = {
+  title: "Privacy Policy | Digital Consulting, AI & Software Development",
+  description:
+    "Starstack is an AI company specializing in digital consulting, AI, cloud, and enterprise software development for global clients.",
+};
+
 export default function PrivacyPolicy() {
   return (
     <main>
