@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Script from "next/script";
 import PageView from "./_ga/PageView";
+import { Suspense } from "react";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -24,7 +25,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${poppins.variable} antialiased`}>
         {children}
-        <PageView />
+        <Suspense fallback={null}>
+          <PageView />
+        </Suspense>
         {GA_ID ? (
           <>
             {/* GA loader */}
