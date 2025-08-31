@@ -36,8 +36,8 @@ export default function DigitalAndAIConsulting() {
           src: "/videos/digital-AI.mp4",
           poster: "/videos/digital-AI.jpg",
         }}
-        rightImage="/images/digital-AI.jpg"
-        rightImgMobile="/images/digital-AI.jpg"
+        rightImage="/images/digital-AI.png"
+        rightImgMobile="/images/digital-AI.png"
         eyebrow="Digital & AI Consulting"
         title={
           "Enabling Digital Product and AI Success through Strategy, Insight, and Scalable Execution."
@@ -52,9 +52,9 @@ export default function DigitalAndAIConsulting() {
           <span className="text-black">Digital Platform</span>{" "}
           <span className="text-[#8e8e8e]">&amp; Product Management</span>
         </h2>
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
+        <div className="mt-8 grid gap-2 md:grid-cols-2">
           <div className="rounded-2xl bg-black text-white p-6 md:p-8">
-            <div className="flex items-center gap-10">
+            <div className="flex items-center gap-8">
               <Image
                 src="/icons/product-vision.png"
                 alt="Product Vision"
@@ -63,10 +63,10 @@ export default function DigitalAndAIConsulting() {
                 className="w-[68px] lg:w-[136px] h-[68px] lg:h-[136px]"
               />
               <div>
-                <h3 className="text-xl md:text-[32px] font-semibold">
+                <h3 className="text-xl md:text-3xl font-semibold">
                   Product Vision
                 </h3>
-                <p className="mt-2 text-base md:text-lg leading-relaxed">
+                <p className="mt-2 text-base md:text-base xl:text-lg leading-relaxed">
                   Establish a well-defined, strategic vision for the product
                   that aligns with the business objectives and effectively
                   addresses the needs of end users.
@@ -75,7 +75,7 @@ export default function DigitalAndAIConsulting() {
             </div>
           </div>
           <div className="rounded-2xl bg-black text-white p-6 md:p-8">
-            <div className="flex items-center gap-10">
+            <div className="flex items-center gap-8">
               <Image
                 src="/icons/product-roadmap.png"
                 alt="Product Roadmap"
@@ -84,10 +84,10 @@ export default function DigitalAndAIConsulting() {
                 className="w-[68px] lg:w-[136px] h-[68px] lg:h-[136px]"
               />
               <div>
-                <h3 className="text-xl md:text-[32px] font-semibold">
+                <h3 className="text-xl md:text-3xl font-semibold">
                   Product Roadmap
                 </h3>
-                <p className="mt-2 text-base md:text-lg leading-relaxed">
+                <p className="mt-2 text-base md:text-base xl:text-lg leading-relaxed">
                   Develop a comprehensive plan that outlines key product
                   features, delivery timelines, future enhancements, and
                   critical milestones to ensure successful execution.
@@ -96,7 +96,7 @@ export default function DigitalAndAIConsulting() {
             </div>
           </div>
           <div className="rounded-2xl bg-black text-white p-6 md:p-8">
-            <div className="flex items-center gap-10">
+            <div className="flex items-center gap-8">
               <Image
                 src="/icons/business-analysis.png"
                 alt="Business Analysis"
@@ -105,10 +105,10 @@ export default function DigitalAndAIConsulting() {
                 className="w-[68px] lg:w-[136px] h-[68px] lg:h-[136px]"
               />
               <div>
-                <h3 className="text-xl md:text-[32px] font-semibold">
+                <h3 className="text-xl md:text-3xl font-semibold">
                   Business Analysis
                 </h3>
-                <p className="mt-2 text-base md:text-lg leading-relaxed">
+                <p className="mt-2 text-base md:text-base xl:text-lg leading-relaxed">
                   Understand the business needs and translate them into
                   practical product features that add real value.
                 </p>
@@ -116,7 +116,7 @@ export default function DigitalAndAIConsulting() {
             </div>
           </div>
           <div className="rounded-2xl bg-black text-white p-6 md:p-8">
-            <div className="flex items-center gap-10">
+            <div className="flex items-center gap-8">
               <Image
                 src="/icons/goto-market.png"
                 alt="Go-to-Market Strategy"
@@ -125,10 +125,10 @@ export default function DigitalAndAIConsulting() {
                 className="w-[68px] lg:w-[136px] h-[68px] lg:h-[136px]"
               />
               <div>
-                <h3 className="text-xl md:text-[32px] font-semibold">
+                <h3 className="text-xl md:text-3xl font-semibold">
                   Go-to-Market Strategy
                 </h3>
-                <p className="mt-2 text-base md:text-lg leading-relaxed">
+                <p className="mt-2 text-base md:text-base xl:text-lg leading-relaxed">
                   Establish a well-defined, strategic vision for the product
                   that aligns with the business objectives and effectively
                   addresses the needs of end users.

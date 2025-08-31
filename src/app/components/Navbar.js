@@ -57,7 +57,7 @@ const Navbar = ({ staticHeader = false }) => {
 
   return (
     <header
-      className={`absolute top-0 left-0 w-full z-40 py-4 px-4 lg:px-20 ${
+      className={`absolute top-0 left-0 w-full z-40 py-4 px-6 lg:px-20 ${
         staticHeader ? "bg-black" : ""
       }`}
     >

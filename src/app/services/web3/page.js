@@ -45,8 +45,8 @@ export default function Web3() {
           src: "/videos/web-3.mp4",
           poster: "/videos/web-3.jpg",
         }}
-        rightImage="/images/web-3.jpg"
-        rightImgMobile="/images/web-3.jpg"
+        rightImage="/images/web-3.png"
+        rightImgMobile="/images/web-3.png"
         eyebrow="Web 3.0"
         title={
           "Decentralized by Design. Powered by Blockchain. Future-Ready  Solutions."

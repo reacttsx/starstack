@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Navbar from "./components/Navbar";
 import HeroSlider from "./components/HeroSlider";
 import WhatWeDo from "./components/WhatWeDo";
@@ -34,22 +35,19 @@ export default function Home() {
           <h2 className="text-center text-3xl md:text-[56px] font-extrabold mb-12">
             Success <span className="text-[#8e8e8e]">Stories</span>
           </h2>
-          <div className="grid gap-10 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+          <div className="grid gap-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
             {stories.map((story, i) => (
               <Link
                 key={i}
                 href={story.link}
-                className="group bg-[#111] rounded-lg hover:cursor-pointer"
+                className="group rounded-lg hover:cursor-pointer"
               >
                 <div className="rounded-lg overflow-hidden shadow-lg transform transition duration-300 group-hover:-translate-y-1">
-                  <div className="relative h-56">
-                    <Image
-                      src={story.img}
-                      alt={story.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition duration-300"
-                    />
-                  </div>
+                  <img
+                    src={story.img}
+                    alt={story.title}
+                    className="w-full group-hover:scale-105 transition duration-300 md:h-[360] 2xl:object-cover rounded-lg"
+                  />
                   <div className="p-5">
                     <h3 className="text-xl md:text-2xl font-semibold mb-2 text-white">
                       {story.title}
@@ -63,10 +61,13 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-14 flex justify-center">
-            <button className="flex items-center gap-3 px-8 py-3 border border-white rounded-full text-base md:text-lg font-semibold hover:bg-white hover:text-black transition hover:cursor-pointer">
+            <Link
+              href="/portfolio"
+              className="flex items-center gap-3 px-8 py-3 border border-white rounded-full text-base md:text-lg font-semibold hover:bg-white hover:text-black transition hover:cursor-pointer"
+            >
               View More
               <CgArrowLongRight size={35} />
-            </button>
+            </Link>
           </div>
         </div>
       </section>

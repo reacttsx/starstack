@@ -35,8 +35,8 @@ export default function SoftwareEngineering() {
           src: "/videos/software-engineering.mp4",
           poster: "/videos/software-engineering.jpg",
         }}
-        rightImage="/images/software-engineering.jpg"
-        rightImgMobile="/images/software-engineering.jpg"
+        rightImage="/images/software-engineering.png"
+        rightImgMobile="/images/software-engineering.png"
         eyebrow="Software Engineering"
         title={
           "We build software systems that empower outcomes, scale impact,  and deliver lasting value."

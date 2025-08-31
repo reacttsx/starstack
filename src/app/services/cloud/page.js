@@ -13,8 +13,8 @@ export default function Cloud() {
           src: "/videos/cloud-service.mp4",
           poster: "/videos/cloud-service.jpg",
         }}
-        rightImage="/images/cloud-service.jpg"
-        rightImgMobile="/images/cloud-service.jpg"
+        rightImage="/images/cloud-service.png"
+        rightImgMobile="/images/cloud-service.png"
         eyebrow="Cloud Services"
         title={
           "Migrate and Modernize your applications with our Cloud  Engineering services"

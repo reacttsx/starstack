@@ -44,12 +44,12 @@ export default function HeroImage({
         <div
           className={clsx(
             "mx-auto px-6 lg:px-20",
-            "grid items-center",
+            "grid md:items-center",
             justifyMap,
             "min-h-[calc(85svh-var(--nav-height,0px))] md:min-h-[calc(75svh-var(--nav-height,0px))]"
           )}
         >
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mt-5 md:mt-0">
             {eyebrow && (
               <p className="text-sm md:text-base lg:text-lg text-[#ADADAD]">
                 {eyebrow}

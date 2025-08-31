@@ -81,14 +81,14 @@ export default function ServiceHero({
                 </div>
               </div>
               <div className="hidden lg:block w-[560px] max-w-[40vw]">
-                <div className="rounded-2xl border-3 border-white/90 overflow-hidden shadow-2xl">
+                <div className="overflow-hidden shadow-2xl">
                   <div className="relative aspect-[16/10]">
                     <Image
                       src={rightImage}
                       alt=""
                       width={560}
                       height={473}
-                      className="object-cover h-[473px]"
+                      className="object-contain"
                       priority={false}
                     />
                   </div>
@@ -96,17 +96,15 @@ export default function ServiceHero({
               </div>
             </div>
             <div className="block lg:hidden w-full max-w-md mt-10 mx-auto">
-              <div className="rounded-2xl border-3 border-white/90 overflow-hidden shadow-2xl">
-                <div className="relative aspect-[16/10]">
+              <div className="overflow-hidden shadow-2xl">
                   <Image
                     src={rightImgMobile}
                     alt=""
-                    fill
-                    sizes="100vw"
-                    className="object-cover"
+                    width={560}
+                      height={473}
+                    className="object-contain"
                     priority={false}
                   />
-                </div>
               </div>
             </div>
           </div>
