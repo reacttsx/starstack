@@ -36,8 +36,8 @@ export default function ExperienceDesign() {
           src: "/videos/experinced-design.mp4",
           poster: "/videos/experinced-design.jpg",
         }}
-        rightImage="/images/experinced-design.jpg"
-        rightImgMobile="/images/experinced-design.jpg"
+        rightImage="/images/experinced-design.png"
+        rightImgMobile="/images/experinced-design.png"
         eyebrow="Experience Design"
         title={
           "Design experiences that captivate emotions, drive connections and  earn loyalty"
@@ -47,9 +47,12 @@ export default function ExperienceDesign() {
         }
         offsetForNavbar
       />
-      <section className="px-4 lg:px-20 py-12 lg:mt-[-200px] relative">
+      <section
+        id="services"
+        className="px-4 lg:px-20 py-12 lg:mt-[-200px] relative"
+      >
         <div className="grid gap-10 md:grid-cols-12 items-start">
-          <div className="md:col-span-5 hidden md:block">
+          <div className="md:col-span-5 hidden md:block md:self-start md:sticky md:top-[88px]">
             <div className="rounded-xl ring-1 ring-black/15 overflow-hidden">
               <div className="relative aspect-[4/3]">
                 <Image
