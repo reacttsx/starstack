@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { MdPhoneInTalk } from "react-icons/md";
 import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import countryList from "react-select-country-list";
@@ -52,6 +52,9 @@ const FREE_EMAIL_DOMAINS = new Set([
 ]);
 
 const ContactSection = ({ title = "", service = "" }) => {
+  const [message, setMessage] = useState(null);
+  const [error, setError] = useState(null);
+
   const countries = useMemo(() => countryList().getData(), []);
   const defaultService =
     service && services.includes(service) ? service : services[0];
@@ -170,9 +173,9 @@ const ContactSection = ({ title = "", service = "" }) => {
               }
 
               resetForm();
-              alert("Thanks! We’ll get back to you soon.");
+              setMessage("Thanks! We’ll get back to you soon.");
             } catch (err) {
-              alert(err?.message || "Something went wrong.");
+              setError(err?.message || "Something went wrong.");
             } finally {
               setSubmitting(false);
             }
@@ -340,6 +343,10 @@ const ContactSection = ({ title = "", service = "" }) => {
                 >
                   {isSubmitting ? "Sending..." : "Send a Message"}
                 </button>
+                {message && (
+                  <p className="mt-3 text-xs text-green-600">{message}</p>
+                )}
+                {error && <p className="mt-3 text-xs text-red-600">{error}</p>}
               </div>
               <p className="mt-3 text-xs text-black/60">
                 This site is protected by reCAPTCHA and the Google{" "}
