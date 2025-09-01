@@ -152,14 +152,13 @@ const ContactSection = ({ title = "", service = "" }) => {
           onSubmit={async (values, { setSubmitting, resetForm }) => {
             try {
               const recaptchaToken = await getRecaptchaToken("contact_form");
-              console.log(recaptchaToken);
 
               if (!recaptchaToken) {
                 alert("reCAPTCHA failed to load. Please try again.");
                 return;
               }
 
-              const res = await fetch("/api/contact", {
+              const res = await fetch("http://localhost:8787/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ ...values, recaptchaToken }),
@@ -290,7 +289,7 @@ const ContactSection = ({ title = "", service = "" }) => {
                     className="mt-1 text-xs text-red-600"
                   />
                 </div>
-                <div className={selectWrap}>
+                <div className={`${selectWrap} col-span-2 md:col-span-1`}>
                   <Field
                     as="select"
                     name="service"

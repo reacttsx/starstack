@@ -42,7 +42,7 @@ export default function HeroImage({
         fill
         sizes="100vw"
         priority={priority}
-        className="object-cover hidden md:block"
+        className={`object-cover ${imageSrcMob ? "hidden md:block" : ""}`}
       />
       <div
         className="absolute inset-0 portfolio-gradient"
