@@ -69,6 +69,7 @@ const Navbar = ({ staticHeader = false }) => {
             width={233}
             height={28}
             priority
+            className="w-[160px] md:w-[233px] h-auto"
           />
         </Link>
         <nav className="hidden lg:flex gap-12 items-center text-lg text-white">
