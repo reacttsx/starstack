@@ -126,7 +126,7 @@ export default function AboutUs() {
             </h3>
             <p className="text-base md:text-lg">
               We celebrate diversity, not just in backgrounds, but in
-              perspectives, skills, and ways of thinking. Whether {`we're`}
+              perspectives, skills, and ways of thinking. Whether {`we're`}{" "}
               designing intelligent products, solving tough technical
               challenges, or brainstorming over a cup of coffee, we do it with
               passion, purpose, and a shared sense of possibility.
