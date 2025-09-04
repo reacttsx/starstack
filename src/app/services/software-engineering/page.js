@@ -132,7 +132,7 @@ export default function SoftwareEngineering() {
             <div className="rounded-xl ring-1 ring-black/15 overflow-hidden block md:hidden mb-5">
               <div className="relative aspect-[16/9]">
                 <Image
-                  src="/images/capabilities/mobile-application.jpg"
+                  src="/images/capabilities/application.jpg"
                   alt="Mobile Application Development"
                   fill
                   sizes="(min-width:1024px) 40vw, 100vw"
@@ -157,7 +157,7 @@ export default function SoftwareEngineering() {
             <div className="rounded-xl ring-1 ring-black/15 overflow-hidden">
               <div className="relative aspect-[16/9]">
                 <Image
-                  src="/images/capabilities/mobile-application.jpg"
+                  src="/images/capabilities/application.jpg"
                   alt="Mobile Application Development"
                   fill
                   sizes="(min-width:1024px) 40vw, 100vw"
@@ -173,7 +173,7 @@ export default function SoftwareEngineering() {
             <div className="rounded-xl ring-1 ring-black/15 overflow-hidden">
               <div className="relative aspect-[16/9]">
                 <Image
-                  src="/images/capabilities/application.jpg"
+                  src="/images/capabilities/mobile-application.jpg"
                   alt="Application Modernization"
                   fill
                   sizes="(min-width:1024px) 40vw, 100vw"
